@@ -1,6 +1,5 @@
 "use client"
 import { TITLE_TAILWIND_CLASS } from '@/utils/constants'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -93,14 +92,7 @@ const SpringAnimatedFeatures = () => {
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {ProjectsData.map((project) => {
           return (
-            <motion.div
-              whileHover={{
-                y: -8,
-              }}
-              transition={{
-                type: 'spring',
-                bounce: 0.7,
-              }}
+            <div
               key={project.id}
               className="mt-5 text-left border p-6 rounded-md dark:bg-black"
             >
@@ -119,7 +111,7 @@ const SpringAnimatedFeatures = () => {
                   {project.description}
                 </div>
               </Link>
-            </motion.div>
+            </div>
           )
         })}
       </div>
